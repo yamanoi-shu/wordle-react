@@ -1,0 +1,68 @@
+.row{
+  margin: 2px 0px;
+    overflow: hidden;
+    text-align: center;
+}
+
+button[class^="key-"] {
+  height: 80px;
+  margin: 0px 2px;
+  font-family: l "Arial Black";
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.key-enter {
+  width: 100px;
+  color: #000;
+  background-color: #BBBBBB;
+}
+
+.key-backspace {
+  width: 100px;
+  color: #000;
+  background-color: #BBBBBB;
+}
+
+.key-normal {
+  width: 60px;
+  color: #000;
+  background-color: #BBBBBB;
+}
+
+.key-normal:hover {
+  width: 60px;
+  color: #000;
+  background-color: #AAAAAA;
+}
+
+.key-present {
+  width: 60px;
+  color: #000;
+  background-color: #FFCC33;
+}
+
+.key-present:hover {
+  width: 60px;
+  color: #000;
+  background-color: #FFCC00;
+}
+
+.key-correct {
+  width: 60px;
+  color: #000;
+  background-color: #33CC00;
+}
+
+.key-correct:hover {
+  width: 60px;
+  color: #000;
+  background-color: #339900;
+}
+
+.key-absent {
+  width: 60px;
+  color: #000;
+  background-color: #333333;
+}
+
