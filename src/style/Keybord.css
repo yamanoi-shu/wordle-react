@@ -10,6 +10,7 @@ button[class^="key-"] {
   font-family: l "Arial Black";
   font-size: 2em;
   font-weight: bold;
+  border-radius: 5px;
 }
 
 .key-enter {
