@@ -16,53 +16,41 @@ button[class^="key-"] {
   width: 100px;
   color: #000;
   background-color: #BBBBBB;
+  cursor: pointer;
 }
 
 .key-backspace {
   width: 100px;
   color: #000;
   background-color: #BBBBBB;
+  cursor: pointer;
 }
 
 .key-normal {
   width: 60px;
   color: #000;
   background-color: #BBBBBB;
-}
-
-.key-normal:hover {
-  width: 60px;
-  color: #000;
-  background-color: #AAAAAA;
+  cursor: pointer;
 }
 
 .key-present {
   width: 60px;
   color: #000;
   background-color: #FFCC33;
-}
-
-.key-present:hover {
-  width: 60px;
-  color: #000;
-  background-color: #FFCC00;
+  cursor: pointer;
 }
 
 .key-correct {
   width: 60px;
   color: #000;
   background-color: #33CC00;
-}
-
-.key-correct:hover {
-  width: 60px;
-  color: #000;
-  background-color: #339900;
+  cursor: pointer;
 }
 
 .key-absent {
   width: 60px;
   color: #000;
   background-color: #333333;
+  cursor: default;
 }
 

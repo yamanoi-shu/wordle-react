@@ -2,8 +2,14 @@ import React from 'react';
 import './style/Keybord.css';
 
 function Key(props) {
+  let isAvailable = props.type === 'absent';
   return (
-    <button className={'key-'+props.type}>{props.value}</button>
+    <button
+      className={'key-'+props.type}
+      disabled={isAvailable}
+    >
+      {props.value}
+    </button>
   );
 }
 
