@@ -1,0 +1,38 @@
+.board{
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.board .row{
+  display: flex;
+  justify-content: center;
+}
+
+div[class^='pannel-']{
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  margin: 2px 2px;
+  color: #fff;
+}
+
+div[class^='pannel-'] p{
+  font-family: "Arial Black";
+  font-size: 2em;
+}
+
+.pannel-normal {
+  background-color: #333333;
+}
+
+.pannel-present {
+  background-color: #FFCC33;
+}
+
+.pannel-correct {
+  background-color: #33CC00;
+}

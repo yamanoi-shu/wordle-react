@@ -1,27 +1,26 @@
 .row{
   margin: 2px 0px;
-    overflow: hidden;
-    text-align: center;
+  overflow: hidden;
+  text-align: center;
 }
 
 button[class^="key-"] {
   height: 80px;
   margin: 0px 2px;
-  font-family: l "Arial Black";
+  font-family: "Arial Black";
   font-size: 2em;
-  font-weight: bold;
   border-radius: 5px;
 }
 
 .key-enter {
-  width: 100px;
+  width: 110px;
   color: #000;
   background-color: #BBBBBB;
   cursor: pointer;
 }
 
 .key-backspace {
-  width: 100px;
+  width: 110px;
   color: #000;
   background-color: #BBBBBB;
   cursor: pointer;
