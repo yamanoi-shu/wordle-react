@@ -39,6 +39,8 @@ export default class App extends React.Component {
       answers: [{
         'letters': Array(5).fill(''),
       }],
+      turn: 0,
+      history: [],
     }
     for (var i = 0; i < 5; i++) {
       this.state.answers.push({'letters': Array(5).fill('')});
