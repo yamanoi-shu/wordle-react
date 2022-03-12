@@ -40,12 +40,33 @@ export default class App extends React.Component {
         'letters': Array(5).fill(''),
       }],
       turn: 0,
-      history: [],
     }
     for (var i = 0; i < 5; i++) {
       this.state.answers.push({'letters': Array(5).fill('')});
-      }
     }
+
+    try {
+      const ansList = await axios.get("http://localhost:8080/api/get");
+      var cnt = 0;
+      ansList.list.forEach((elem) => {
+        for (var i = 0; i < 5; i++) {
+          const value = elem[i.toString()].value;
+          const type = elem[i.toString()].type;
+
+          this.state.answers[cnt].letters[i] = value;
+          if (this.state.letters[value] != 'correct') {
+            this.state.letters[value] = type;
+          }
+        }
+        cnt++;
+      })
+    } catch(err => {
+      console.log(err);
+    })
+    this.state.turn = cnt;
+  }
+
+  async set
   render() {
     this.state.answers[0].letters[1] = 'A';
     return (
