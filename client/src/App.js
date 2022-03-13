@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './style/App.css';
-import { Keyboard } from './Keybord';
+import { Keyboard } from './Keyboard';
 import { Board } from './Board';
 import axios from 'axios'
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/Keybord.css';
+import './style/Keyboard.css';
 
 export const Key = (props) => {
   let isAvailable = props.type === 'absent';
