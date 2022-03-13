@@ -1,10 +1,9 @@
 import React from 'react';
 import './style/Board.css';
 
-function Pannel(props) {
+export const Pannel = (props) => {
   var value = props.value;
   var type = props.letters[value] || 'normal';
-  console.log(type);
   if (type === 'absent') {
     type = 'normal';
   }
@@ -15,25 +14,28 @@ function Pannel(props) {
   );
 }
 
-export default class Board extends React.Component {
-  lettersList(answer) {
+export const Board = (props) => {
+  const lettersList = (answer) => {
     var list =[];
     for (var p in answer.letters) {
-      list.push(<Pannel value={answer.letters[p]} letters={this.props.letters} />)
+      list.push(<Pannel value={answer.letters[p]} letters={props.letters} />)
     }
     return list;
   }
-  render() {
-    return (
-      <div className="board">
-      {(() => {
-        var list = [];
-        this.props.answers.map((answer) => {
-          list.push(<div className='row'>{this.lettersList(answer)}</div>)
-        });
-        return list;
-      })()}
-      </div>
-    );
-  }
+  return (
+    <div className="board">
+    {(() => {
+      var list = [];
+      var ansNum = props.answers.length;
+      props.answers.forEach(answer => {
+        list.push(<div className='row'>{lettersList(answer)}</div>)
+      });
+      for (var i = 0; i < 6 - ansNum; i++) {
+        list.push(<div className='row'>{lettersList({'letters': Array(5).fill('')})}</div>);
+      }
+      return list;
+    })()}
+    </div>
+  );
+
 }
