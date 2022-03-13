@@ -93,6 +93,17 @@ export const App = () => {
             }
           }
         }
+        onClickEnter={e => {
+            if (targetAns.length ===  5) {
+              console.log(targetAns);
+            }
+          }
+        }
+        onClickBack={e => {
+            if (targetAns.length > 0) {
+              setTargetAns(targetAns.slice(0, -1));
+            }
+        }}
       />
     </div>
   )

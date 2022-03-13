@@ -16,13 +16,13 @@ export const Key = (props) => {
 
 const EnterKey = (props) => {
   return (
-    <button className="key-enter"> Enter </button>
+    <button className="key-enter" onClick={e => props.clickFunc()}> Enter </button>
   );
 }
 
 const BackspaceKey = (props) => {
   return (
-    <button className="key-backspace"> {"<<"} </button>
+    <button className="key-backspace" onClick={e => props.clickFunc()}> {"<<"} </button>
   );
 }
 
@@ -53,7 +53,7 @@ export const Keyboard = (props) => {
         <Key type={props.letters.L} value="L" clickFunc={props.onClickKey} />
       </div>
       <div className="row">
-        <EnterKey />
+        <EnterKey clickFunc={props.onClickEnter} />
         <Key type={props.letters.Z} value="Z" clickFunc={props.onClickKey} />
         <Key type={props.letters.X} value="X" clickFunc={props.onClickKey} />
         <Key type={props.letters.C} value="C" clickFunc={props.onClickKey} />
@@ -61,7 +61,7 @@ export const Keyboard = (props) => {
         <Key type={props.letters.B} value="B" clickFunc={props.onClickKey} />
         <Key type={props.letters.N} value="N" clickFunc={props.onClickKey} />
         <Key type={props.letters.M} value="M" clickFunc={props.onClickKey} />
-        <BackspaceKey />
+        <BackspaceKey clickFunc={props.onClickBack} />
       </div>
     </div>
   )
