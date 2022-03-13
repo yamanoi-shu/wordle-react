@@ -40,6 +40,9 @@ export const App = () => {
 
   const [turn, setTurn] = useState(0);
 
+  const [correctAns, setCorrectAns] = useState('');
+
+
   const answerToLettersList = (str) => {
     var list = str.split('');
     while (list.length < 5) {
@@ -103,7 +106,8 @@ export const App = () => {
             if (targetAns.length > 0) {
               setTargetAns(targetAns.slice(0, -1));
             }
-        }}
+          }
+        }
       />
     </div>
   )
