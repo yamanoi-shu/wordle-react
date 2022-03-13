@@ -28,11 +28,14 @@ export const Board = (props) => {
       var list = [];
       var ansNum = props.answers.length;
       props.answers.forEach(answer => {
-        list.push(<div className='row'>{lettersList(answer)}</div>)
+        list.push(<div className='row'>{lettersList(answer)}</div>);
       });
-      for (var i = 0; i < 6 - ansNum; i++) {
+      list.push(<div className='row'>{lettersList(props.targetAns)}</div>);
+      console.log(list);
+      for (var i = 0; i < 5 - ansNum; i++) {
         list.push(<div className='row'>{lettersList({'letters': Array(5).fill('')})}</div>);
       }
+      console.log(list);
       return list;
     })()}
     </div>

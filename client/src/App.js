@@ -34,7 +34,19 @@ export const App = () => {
     'M': 'normal',
   })
 
-  const [answers, setAnswers] = useState([])
+  const [answers, setAnswers] = useState([]);
+
+  const [targetAns, setTargetAns] = useState('');
+
+  const [turn, setTurn] = useState(0);
+
+  const answerToLettersList = (str) => {
+    var list = str.split('');
+    while (list.length < 5) {
+      list.push('');
+    }
+    return list;
+  }
 
   useEffect(() => {
     axios.get("http://localhost:8080/api/get")
@@ -54,6 +66,7 @@ export const App = () => {
           }
         }
         setAnswers([...answers, newAns]);
+        setTurn(res.list.length)
       })
     })
     .catch(err => {
@@ -67,10 +80,19 @@ export const App = () => {
       <h1>Wordle-React</h1>
       <Board
         answers={answers}
+        targetAns={{'letters': answerToLettersList(targetAns)}}
+        turn={turn}
         letters={letters}
       />
       <Keyboard
         letters={letters}
+        onClickKey={e => {
+            if (targetAns.length != 5) {
+              const newTargetAns = targetAns + e;
+              setTargetAns(newTargetAns);
+            }
+          }
+        }
       />
     </div>
   )
