@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "serve": "node dist/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-loader": "^8.2.3",
     "express": "^4.17.3",
-    "firebase-admin": "^10.0.2"
+    "firebase-admin": "^10.0.2",
+    "webpack": "^5.70.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.9.2"
   }
 }

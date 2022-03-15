@@ -1,10 +1,9 @@
-const { initializeApp } = require('firebase-admin/app');
-const { getFirestore } = require();
+import { firestore } from 'firebase-admin';
 
 export default class Firestore {
   constructor() {
-    initializeApp();
-    this.db = getFirestore();
+    admin.initializeApp();
+    this.db = admin.firestore();
   }
 
   async getAnsList(uuid) {
@@ -13,6 +12,5 @@ export default class Firestore {
     return answersList;
   }
 
-  async
 }
 
